@@ -11,6 +11,7 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.10.10",
+    "tsimp": "^2.0.12",
     "typescript": "5.5"
   }
 }
