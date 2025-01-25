@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/node": "^22.10.10",
     "tsimp": "^2.0.12",
+    "tsx": "^4.19.2",
     "typescript": "5.5"
   }
 }
