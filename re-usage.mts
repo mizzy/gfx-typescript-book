@@ -8,13 +8,13 @@ const sign = re`[+-]`;
 const decimal = re`${sign}?${digitNonZero}${digit}*|${sign}?${digit}`;
 const decimalOnly = re`^${decimal}$`;
 
-test("decimal", () => {
-    test("valid", () => {
+test("decimal", async (t) => {
+    await t.test("valid", () => {
         assert.ok(decimalOnly.test("123"));
         assert.ok(decimalOnly.test("+789"));
         assert.ok(decimalOnly.test("-0"));
     });
-    test("invalid", () => {
+    await t.test("invalid", () => {
         assert.ok(!decimalOnly.test("foo"));
         assert.ok(!decimalOnly.test("3.14"));
         assert.ok(!decimalOnly.test("001"));
